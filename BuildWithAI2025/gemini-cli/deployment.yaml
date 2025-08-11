@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ottawa-jokes-deployment
+  labels:
+    app: ottawa-jokes
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ottawa-jokes
+  template:
+    metadata:
+      labels:
+        app: ottawa-jokes
+    spec:
+      containers:
+      - name: ottawa-jokes
+        image: us-central1-docker.pkg.dev/gkerocks/cloud-run-source-deploy/ottawa-jokes:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
