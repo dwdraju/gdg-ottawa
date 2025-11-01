@@ -1,0 +1,26 @@
+```
+gcloud run deploy ollama-gemma3-270m-gpu \
+  --source . \
+  --region europe-west1 \
+  --concurrency 7 \
+  --cpu 8 \
+  --set-env-vars OLLAMA_NUM_PARALLEL=4 \
+  --gpu 1 \
+  --gpu-type nvidia-l4 \
+  --max-instances 3 \
+  --memory 16Gi \
+  --allow-unauthenticated \
+  --no-cpu-throttling \
+  --no-gpu-zonal-redundancy \
+  --timeout 600 \
+  --labels dev-tutorial=codelab-agent-gpu
+```
+
+```
+export OLLAMA_URL=$(gcloud run services describe ollama-gemma3-270m-gpu \
+    --region=europe-west1 \
+    --format='value(status.url)')
+
+echo "🎉 Gemma backend deployed at: $OLLAMA_URL"
+```
+

@@ -1,0 +1,44 @@
+# The .gcloudignore file specifies which files are *not* uploaded to Google Cloud
+# when running gcloud builds submit or gcloud run deploy.
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore local development files
+.env
+*.env
+*.log
+output.txt
+*.md
+
+# Ignore system and IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Ignore virtual environments
+venv/
+env/
+.venv/
+
+# Ignore Git files
+.git/
+.gitignore
+
+# Ignore build and package artifacts
+build/
+dist/
+*.egg-info/
+*.tar.gz
+*.zip
+
+# Ignore large test files or data
+tests/
+samples/
+notebooks/
+data/

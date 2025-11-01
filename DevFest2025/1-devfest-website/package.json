@@ -1,0 +1,21 @@
+{
+  "name": "devfest-ottawa-2025-site",
+  "version": "1.0.0",
+  "description": "Static site for DevFest Ottawa 2025 served with a minimal Node.js/Express server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": ["devfest", "gdg", "ottawa", "static-site"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
