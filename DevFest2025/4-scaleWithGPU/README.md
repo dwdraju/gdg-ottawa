@@ -60,8 +60,6 @@ To deploy the agent to Google Cloud Run, you can use the following command. This
 
 ```bash
 export PROJECT_ID=$(gcloud config get-value project)
-export AGENT_URL=https://production-adk-agent-757935627251.europe-west1.run.app
-
 gcloud run deploy production-adk-agent \
    --source ./adk_agent \
    --region europe-west1 \
@@ -83,10 +81,14 @@ gcloud run deploy production-adk-agent \
 You can perform a load test on the deployed agent using the following command. This will simulate 20 concurrent users for 60 seconds, with a spawn rate of 5 users per second.
 
 ```bash
-uv run locust -f adk_agent/load-test.py \
+export AGENT_URL=$(gcloud run services describe production-adk-agent \
+    --region=europe-west1 \
+    --format='value(status.url)')
+
+uv run locust -f ./adk_agent/load-test.py \
    -H $AGENT_URL \
    --headless \
-   -t 60s \
+   -t 120s \
    -u 20 \
    -r 5
 ```

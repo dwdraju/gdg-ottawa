@@ -43,8 +43,9 @@ To deploy the agent to Google Cloud Run, you can use the following command. This
 
 ```bash
 export PROJECT_ID=$(gcloud config get-value project)
-export OLLAMA_URL=https://ollama-gemma3-270m-gpu-757935627251.europe-west1.run.app
-export AGENT_URL=https://production-adk-agent-757935627251.europe-west1.run.app
+export OLLAMA_URL=$(gcloud run services describe ollama-gemma3-270m-gpu \
+    --region=europe-west1 \
+    --format='value(status.url)')
 
 gcloud run deploy production-adk-agent \
    --source . \
@@ -67,10 +68,14 @@ gcloud run deploy production-adk-agent \
 You can perform a load test on the deployed agent using the following command. This will simulate 20 concurrent users for 60 seconds, with a spawn rate of 5 users per second.
 
 ```bash
+export AGENT_URL=$(gcloud run services describe production-adk-agent \
+    --region=europe-west1 \
+    --format='value(status.url)')
+
 uv run locust -f load-test.py \
    -H $AGENT_URL \
    --headless \
-   -t 60s \
+   -t 120s \
    -u 20 \
    -r 5
 ```

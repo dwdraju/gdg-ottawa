@@ -52,7 +52,7 @@ First, set the necessary environment variables. Replace `your-bucket-name` with 
 REGION="us-central1"
 PROJECT_ID=$(gcloud config get-value project)
 NAME="image-describer"
-BUCKET_NAME="your-bucket-name" # Replace with your bucket name
+BUCKET_NAME="ottawa-devfest-images" # Replace with your bucket name
 ```
 
 ### 2. Create Artifact Registry Repository

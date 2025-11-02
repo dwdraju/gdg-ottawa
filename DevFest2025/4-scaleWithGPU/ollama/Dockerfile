@@ -18,4 +18,3 @@ RUN ollama serve & sleep 5 && ollama pull $MODEL
 
 # Start Ollama
 ENTRYPOINT ["ollama", "serve"]
-
