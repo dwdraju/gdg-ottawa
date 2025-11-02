@@ -1,10 +1,12 @@
 # MCP Server
 
-This project contains a demo MCP server.
+This project contains a demo MCP server to run on Cloud Run environment.
 
 For deployment instructions, please refer to this codelab:
 https://codelabs.developers.google.com/codelabs/cloud-run/how-to-deploy-a-secure-mcp-server-on-cloud-run
 
+
+### Deploy to Cloud Run
 ```
 gcloud run deploy zoo-mcp-server \
 	--no-allow-unauthenticated \
@@ -13,7 +15,13 @@ gcloud run deploy zoo-mcp-server \
 	--labels=dev-tutorial=codelab-mcp
 ```
 
-Clean deployment
+### Get token for Gemini CLI to access MCP Server
+```
+export ID_TOKEN=$(gcloud auth print-identity-token)
+```
+
+
+### Cleanup deployment
 ```
 gcloud run services delete zoo-mcp-server
 ```

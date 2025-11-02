@@ -19,17 +19,17 @@ This project is organized into several sub-directories, each representing a dist
 *   **Technologies:** Python.
 *   **Setup & Usage:** Refer to the `2-MCPServer/README.md` for detailed instructions.
 
-### 3-scaleWithGPU/
-
-*   **Description:** Components designed for scaling with GPU resources, potentially involving AI/ML workloads.
-*   **Technologies:** Python (ADK Agent), Ollama.
-*   **Setup & Usage:** Refer to the `3-scaleWithGPU/README.md` for detailed instructions.
-
-### 4-imageDescriberJob/
+### 3-imageDescriberJob/
 
 *   **Description:** A job or service responsible for describing images.
 *   **Technologies:** Python.
 *   **Setup & Usage:** Refer to the `4-imageDescriberJob/README.md` for detailed instructions.
+
+### 4-scaleWithGPU/
+
+*   **Description:** Components designed for scaling with GPU resources, potentially involving AI/ML workloads.
+*   **Technologies:** Python (ADK Agent), Ollama.
+*   **Setup & Usage:** Refer to the `3-scaleWithGPU/README.md` for detailed instructions.
 
 ## Getting Started
 

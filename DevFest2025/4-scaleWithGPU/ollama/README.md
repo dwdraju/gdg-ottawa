@@ -24,6 +24,14 @@ gcloud run deploy ollama-gemma3-270m-gpu \
   --labels dev-tutorial=codelab-agent-gpu
 ```
 
+```
+export OLLAMA_URL=$(gcloud run services describe ollama-gemma3-270m-gpu \
+    --region=europe-west1 \
+    --format='value(status.url)')
+
+echo "🎉 Gemma backend deployed at: $OLLAMA_URL"
+```
+
 ## Resources
 
 * **Official Ollama Documentation:** [https://ollama.com/](https://ollama.com/)
