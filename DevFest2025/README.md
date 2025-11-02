@@ -1,7 +1,9 @@
-# DevFest 2025 Demo on Accelerating AI with Cloud Run
+# DevFest Ottawa 2025 Demo on Accelerating AI with Cloud Run
 [DevFest Ottawa 2025](https://gdg.community.dev/events/details/google-gdg-ottawa-presents-devfest-ottawa-2025-code-connect-create/)
 
-This repository contains various services and applications developed for DevFest 2025.
+[Slides of the Session](https://docs.google.com/presentation/d/1eB-4PClB0yOLqB1aKAACBzkpm8jb7ayN-6sOfDPEeb4/edit?usp=sharing)
+
+This repository contains various services and applications developed for DevFest Ottawa 2025.
 
 ## Project Structure
 
