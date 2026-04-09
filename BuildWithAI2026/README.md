@@ -13,3 +13,7 @@ Welcome to the Build With AI Ottawa 2026 event repository!
 
 - `101/`: Introductory agent examples.
 - `prai-roadshow-lab-1-starter/`: End code for the Multi-Agent System codelab.
+
+## Connect
+
+- **LinkedIn:** [Raju Dawadi](https://www.linkedin.com/in/dwdraju/)
