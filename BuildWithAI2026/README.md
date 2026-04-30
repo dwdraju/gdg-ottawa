@@ -11,7 +11,7 @@ Welcome to the Build With AI Ottawa 2026 event repository!
 
 - **Codelab:** [Building a Multi-Agent System](https://codelabs.developers.google.com/codelabs/production-ready-ai-roadshow/1-building-a-multi-agent-system/building-a-multi-agent-system#0)
 - **Live Demo:** [Course Creator Demo](https://course-creator-998451271143.us-central1.run.app/)
-- **Temporary $5 Credit:** [Claim Google Cloud Credit](https://trygcp.dev/claim/deveco-gdg-d466e3d5cb7)
+- **Temporary $5 Credit:** [Claim Google Cloud Credit](https://trygcp.dev/claim/deveco-gdg-3e99784229c)
 
 ## Project Structure
 
